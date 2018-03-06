@@ -7,6 +7,8 @@ c = new Barplot(a,b);
 
 d = new Barplot(a,b);
 
+e = new ScatterPlot(a,b);
+
 
 
 
