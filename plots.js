@@ -1,14 +1,16 @@
 class Barplot {
-  constructor(x,y){    
+  constructor(x,y){
+this.data =y;
+this.labels = x;
     
 this.box_w=600;  //container box width
 this.box_h=320;  //container box height
-this.rw=50; //rect width
+this.rw=50; //bar width
 this.gap=5;  //gap between each bar
-this.data =y;
-this.labels = x;
+
 this.x_start=10; //start drawing bar from this position.
 this.y_start=20;  
+
 this.r=[];  // holds all bars
 this.t=[]; // holds all labels
 this.u=[]; //data number
@@ -23,7 +25,7 @@ this.bary= this.box_h-this.y_start-this.data[i];
 this.barw= this.rw ;
 this.barh= this.data[i];
 
-this.r[i]=this.box.rect(this.barx,this.bary,this.barw,this.barh).attr({'fill':'green'});
+this.r[i]=this.box.rect(this.barx,this.bary,this.barw,this.barh).attr({'fill':'green'});  //draw the bar
   
 this.t[i]= this.box.text(this.barx+5,this.box_h-this.gap,this.labels[i]).attr({'fill':'blue'});
   
