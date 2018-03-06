@@ -5,7 +5,7 @@ this.labels = x;
     
 this.box_w=600;  //container box width
 this.box_h=320;  //container box height
-this.rw=50; //bar width
+this.rw=30; //bar width
 this.gap=5;  //gap between each bar
 
 this.x_start=10; //start drawing bar from this position.
@@ -18,6 +18,13 @@ this.u=[]; //data number
 this.box = Snap(this.box_w,this.box_h);
 this.box.addClass("box");
   
+  
+this.p1= "M"+this.x_start+","+(this.box_h-this.y_start)+'h'+this.box_w;
+this.p2= "M"+this.x_start+","+(this.box_h-this.y_start)+'v'+(this.y_start-this.box_h);
+
+this.x_axis = this.box.path(this.p1).attr({'fill':'none','stroke':'gray','stroke-width':2});
+this.y_axis = this.box.path(this.p2).attr({'fill':'none','stroke':'gray','stroke-width':2});
+
 for (var i=0;i<this.data.length;i++){
 
 this.barx= i*(this.rw+this.gap)+this.x_start;

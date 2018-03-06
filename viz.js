@@ -1,7 +1,7 @@
 $(document).ready(function() {
     
 a = ['a','b','c','d'];
-b=[20,30,50,60];
+b=[100,120,200,250];
 
 c = new Barplot(a,b);
 

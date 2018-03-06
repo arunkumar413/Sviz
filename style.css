@@ -2,4 +2,7 @@
 
 .box{
     display: block;
+    border:solid;
+    border-color: gray;
+
 }
