@@ -1,12 +1,11 @@
 $(document).ready(function() {
     
-s= Snap(900,900);
+a = ['a','b','c','d'];
+b=[20,30,50,60];
 
+c = new Barplot(a,b);
 
-b = [80,100,20,5,2,250];
-a = ["A","B",'C','D','E','F'];
-
-bar(a,b);
+d = new Barplot(a,b);
 
 
 
